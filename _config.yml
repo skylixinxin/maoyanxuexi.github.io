@@ -1,7 +1,7 @@
 # Site settings
 title: MYAndroid Study
 header-img: "img/bg_starbuck2.jpg"
-tagline: "MYAndroid"
+tagline: "Lixinxin"
 description: "宁静致远"
 baseurl: ""
 url: "https://skylixinxin.github.io/"
@@ -49,7 +49,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "MYAndroid"
+      author: "Lixinxin"
       header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
 
 
