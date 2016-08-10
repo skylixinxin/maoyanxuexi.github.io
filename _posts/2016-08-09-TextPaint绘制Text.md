@@ -7,6 +7,7 @@ tags: [Tech, ]
 # TextPaint绘制Text
 
 ****
+
 ## FontMetrics简介
 
      FontMetrics是Paint的内部类，作用是“字体测量”。它里面呢就定义了top,ascent,descent,bottom,leading五个成员变量其他什么没有。
