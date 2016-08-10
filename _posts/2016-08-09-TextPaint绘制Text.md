@@ -7,12 +7,12 @@ tags: [Tech, ]
 # TextPaint绘制Text
 
 ****
-##FontMetrics简介
+## FontMetrics简介
 
      FontMetrics是Paint的内部类，作用是“字体测量”。它里面呢就定义了top,ascent,descent,bottom,leading五个成员变量其他什么没有。
      Baseline是基线，在Android中，文字的绘制都是从Baseline处开始的，Baseline往上至字符“最高处”的距离我们称之为ascent（上坡度），Baseline往下至字符“最低处”的距离我们称之为descent（下坡度）；top的意思其实就是除了Baseline到字符顶端的距离外还应该包含这些符号的高度，bottom的意思也是一样。一般情况下我们极少使用到类似的符号所以往往会忽略掉这些符号的存在，但是Android依然会在绘制文本的时候在文本外层留出一定的边距，这就是为什么top和bottom总会比ascent和descent大一点的原因。而在TextView中我们可以通过xml设置其属性android:includeFontPadding="false"去掉一定的边距值但是不能完全去掉。
      
-##Demon
+## Demon
 
  ![FontMetrics](http://i2.piimg.com/4851/e9666c5f478233fd.png) 
  ![FontMetrics](http://i2.piimg.com/4851/79ec9808bf6e1f3f.png)
