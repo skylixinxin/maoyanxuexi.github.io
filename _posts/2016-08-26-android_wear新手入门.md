@@ -6,7 +6,7 @@ categories: [blog ]
 ---
 # Android Wear新手入门
 
-****Android Wear的Notification设置以及数据接收同步****
+****Android Wear的Notification设置以及UI常识****
 
 
 ## 准备工作
