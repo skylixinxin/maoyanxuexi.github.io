@@ -20,6 +20,7 @@ categories: [blog ]
 #### 2.Android Wear模拟器的连接
 
     更新了SDK之后就可以创建并打开Android Wear的模拟器了，然后把手机通过USB连接到开发机器上，并且保证手机上的Google Play一直处于登陆状态，且已经安装了最新版的Android Wear应用。然后打开命令行终端，进入到Android SDK的platform－tools目录下，执行adb －d forward tcp:5601 tcp:5601，然后点击手机上Android Wear右上角设置旁边的Icon，选择连接模拟器，这样就可以将手机和Android Wear模拟器连接起来了。
+    
 ![Android_Wear.jpg](http://i2.buimg.com/4851/36ad2bf85ce1a5b9.png)
 
 ## Notification的创建
