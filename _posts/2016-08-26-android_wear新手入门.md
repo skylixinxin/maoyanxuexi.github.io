@@ -6,8 +6,7 @@ categories: [blog ]
 ---
 # Android Wear新手入门
 
-Android Wear的Notification设置以及数据接收同步
-**
+****Android Wear的Notification设置以及数据接收同步****
 
 
 ## 准备工作
@@ -108,5 +107,5 @@ Android Wear的Notification设置以及数据接收同步
    ![Android_Wear.jpg](http://i2.buimg.com/4851/62b317fff97057a6.png)
    
     Page Adapter提供一组页面以填充GridViewPager部件。要实现这个adapter，需要继承Wearable UI库中的FragmentGridPageAdapter类。picker调用getFragment和getBackground来取得内容以显示到grid的每个位置中，adapter是实现细节取决于我们指定的某组页面。由adapter提供的每个页面是Fragement类型，但是不是所有行都需要有同样数量的页面。设置好了之后将该Adapter设置给GridViewPager就好。
-    
+
    ![Android_Wear.jpg](http://hukai.me/android-training-course-in-chinese/wearables/ui/07_uilib.png)
