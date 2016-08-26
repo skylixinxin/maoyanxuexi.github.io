@@ -6,6 +6,7 @@ categories: [blog ]
 ---
 # Android Wear新手入门
 Android Wear的Notification设置以及数据接收同步
+
 ****
 
 
@@ -13,16 +14,16 @@ Android Wear的Notification设置以及数据接收同步
 
 ### Android Wear与模拟器的连接
 
-####1.首先是SDK的升级
+#### 1.首先是SDK的升级
     请确定你的Android SDK为23.0以上的版本，Extras下的Android Support Library为最新版本，一般的API下载x86的SystemImage就可以。
-####2.Android Wear模拟器的连接
+#### 2.Android Wear模拟器的连接
     更新了SDK之后就可以创建并打开Android Wear的模拟器了，然后把手机通过USB连接到开发机器上，并且保证手机上的Google Play一直处于登陆状态，且已经安装了最新版的Android Wear应用。然后打开命令行终端，进入到Android SDK的platform－tools目录下，执行adb －d forward tcp:5601 tcp:5601，然后点击手机上Android Wear右上角设置旁边的Icon，选择连接模拟器，这样就可以将手机和Android Wear模拟器连接起来了。
 ![Android_Wear.jpg](http://i2.buimg.com/4851/36ad2bf85ce1a5b9.png)
 
 ## Notification的创建
 
     想要实现Android Wear可穿戴设备上的通知，其实根本就不需要进行什么特殊的设置（这个记得以前看的Google的官方文档是需要进行设置的，但是实践中，国内的通知栏不需要任何设置就可以出现在Android Wear的可穿戴设备上）。
-###Notification设置Intent激活Action的三种方式
+### Notification设置Intent激活Action的三种方式
     1.通过setContentIntent（）设置的PendingItent激活Action
 
    ![Android_Wear.jpg](http://i2.buimg.com/4851/e63de96db8fbdbc3.png)
@@ -33,14 +34,14 @@ Android Wear的Notification设置以及数据接收同步
     3.使用 WearableExtender.addAction()
    ![Android_Wear.jpg](http://i2.buimg.com/4851/5c7a56c29183238c.png)
    
-   **注意：**第3种方式是可穿戴式独有的Actions，一旦我们通过这种方式添加了action，可穿戴式设备便不会显示任何其他通过NotificationCompat.Builder.addAction()) 添加的action。这是因为，只有通过 WearableExtender.addAction()) 添加的action才能只在可穿戴设备上显示且不在手持式设备上显示。
+   **注意：** 第3种方式是可穿戴式独有的Actions，一旦我们通过这种方式添加了action，可穿戴式设备便不会显示任何其他通过NotificationCompat.Builder.addAction()) 添加的action。这是因为，只有通过 WearableExtender.addAction()) 添加的action才能只在可穿戴设备上显示且不在手持式设备上显示。
    
-###BigTextStyle
+### BigTextStyle
     我们可以通过setLargeIcon（）为Notification添加一个大图标，但是这些图标在可穿戴设备上会显示成大的背景图片，通过setStyle()来进行BigTextStyle或者InboxStyle的实例设置。
    ![Android_Wear.jpg](http://i2.buimg.com/4851/40df423098f324aa.png)
    ![Android_Wear.jpg](http://hukai.me/android-training-course-in-chinese/wearables/notifications/06_images.png)
    
-###Notification的可穿戴特性
+### Notification的可穿戴特性
     我们可以使用 NotificationCompat.WearableExtender 来添加一些可穿戴式的特性设置，比如制定额外的内容页，或者让用户通过语音输入一些文字等。
    ![Android_Wear.jpg](http://i2.buimg.com/4851/ded293210457ec95.png)
    
